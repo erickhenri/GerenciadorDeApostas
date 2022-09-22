@@ -1,0 +1,50 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: bordex-box;
+}
+button, input {
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+header {
+    display: flex;
+    padding: 10px;
+    box-shadow: 4px 0px 5px rgba(0, 0, 0, 0.2);
+}
+header h1 {
+    text-align: center;
+}
+
+.container {
+    padding: 24px;
+}
+
+.menuOptions {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.betAmount {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.betAmount input {
+    width: 30px;
+    padding: 4px;
+    font-size: 18px;
+    border: 1px solid #8d99ae;
+}
+
+.cards {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
