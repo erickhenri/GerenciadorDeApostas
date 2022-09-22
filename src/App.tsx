@@ -37,12 +37,11 @@ export function App() {
         )
     }
     function deleteCard(id: number) {
-        console.log(peoples)
-        setPeoples((peoplesArray) => {
-            peoplesArray.splice(id, 1)
-            localStorage.setItem("peoples", JSON.stringify(peoplesArray))
-
-            return peoplesArray;
+        setPeoples(() => {
+            const peoplesFilter = peoples.filter((_, index) => index !== id);
+            localStorage.setItem("peoples", JSON.stringify(peoplesFilter));
+            
+            return peoplesFilter;
         })
     }
 
