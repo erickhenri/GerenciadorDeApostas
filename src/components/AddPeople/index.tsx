@@ -6,13 +6,9 @@ interface AddPeopleProps{
         name: string;
         amount: number;
     }[]>>
-    peoples: {
-        name: string;
-        amount: number;
-    }[]
 }
 
-export function AddPeople({ setPeoples, peoples }: AddPeopleProps) {
+export function AddPeople({ setPeoples }: AddPeopleProps) {
     const [onPopUp, setOnPopUp] = useState(false)
     const [name, setName] = useState("")
 
@@ -25,7 +21,6 @@ export function AddPeople({ setPeoples, peoples }: AddPeopleProps) {
                     amount: 0,
                 }
             ]
-            localStorage.setItem("peoples", JSON.stringify(newPeoples))
             return newPeoples;
         })
 

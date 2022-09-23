@@ -15,7 +15,7 @@
     height: 100vh;
     left: 0;
     top: 0;
-    background-color: #0004;
+    background-color: #0006;
 
     display: flex;
     align-items: center;
@@ -34,6 +34,7 @@
     gap: 12px;
 }
 .addPeople .popUp input {
+    width: 80%;
     border: 1px solid #8d99ae;
     padding: 4px;
     font-size: 18px;

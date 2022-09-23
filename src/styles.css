@@ -43,8 +43,12 @@ header h1 {
     border: 1px solid #8d99ae;
 }
 
-.cards {
+.cards, .stopCards {
     display: flex;
     flex-direction: column;
     gap: 20px;
+}
+
+.stopPeoples h2 {
+    margin-block: 20px;
 }

@@ -1,0 +1,25 @@
+.stopCard {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+    padding: 16px;
+    background-color: #caf0f8;
+    border-radius: 8px;
+
+    opacity: 0.8;
+}
+
+.stopCard .name {
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.stopCard .toBack {
+    background-color: #06d6a0;
+    border: none;
+    padding-block: 10px;
+    border-radius: 6px;
+}

@@ -1,49 +1,28 @@
 import { useEffect, useState } from 'react';
 import { AddPeople } from './components/AddPeople';
 import { Card } from './components/Card';
+import { StopCard } from './components/StopCard';
 
 import './styles.css';
 
 export function App() {
-    const [peoples, setPeoples] = useState<{name: string;amount: number;}[]>([])
-    const [betAmount, setBetAmount] = useState(0);
+    const [peoples, setPeoples] = useState<{name: string;amount: number;}[]>(
+        JSON.parse(localStorage.getItem("peoples")!) || []
+    )
+    const [peoplesStop, setPeoplesStop] = useState<{name: string;amount: number;}[]>(
+        JSON.parse(localStorage.getItem("peoplesStop")!) || []
+    )
+    const [betAmount, setBetAmount] = useState(Number(localStorage.getItem("betAmount") || 0));
 
     useEffect(() => {
-        if(localStorage.getItem("peoples")) {
-            setPeoples(JSON.parse(localStorage.getItem("peoples")!))
-        }
-        if(localStorage.getItem("betAmount")) {
-            setBetAmount(Number(localStorage.getItem("betAmount") || 0))
-        }
-    }, [])
-    useEffect(() => {
-        if(betAmount !== 0) {
-            localStorage.setItem("betAmount", String(betAmount))
-        }
+        localStorage.setItem("betAmount", String(betAmount))
     }, [betAmount])
-
-    function setPlayerValue(id : number) {
-        setPeoples(peoples.map((person, index) => (
-            index === id 
-            ? {
-                ...person,
-                amount: person.amount + (peoples.length - 1)*betAmount,
-                }
-            : {
-                ...person,
-                amount: person.amount - betAmount,
-                }
-        ))
-        )
-    }
-    function deleteCard(id: number) {
-        setPeoples(() => {
-            const peoplesFilter = peoples.filter((_, index) => index !== id);
-            localStorage.setItem("peoples", JSON.stringify(peoplesFilter));
-            
-            return peoplesFilter;
-        })
-    }
+    useEffect(() => {
+        localStorage.setItem("peoples", JSON.stringify(peoples))
+    },[peoples])
+    useEffect(() => {
+        localStorage.setItem("peoplesStop", JSON.stringify(peoplesStop))
+    }, [peoplesStop])
 
     return (
         <div className="App">
@@ -54,7 +33,6 @@ export function App() {
                 <div className="menuOptions">
                     <AddPeople 
                         setPeoples={setPeoples} 
-                        peoples={peoples}
                     />
                     <div className='betAmount'>
                         <label>Valor da aposta</label>
@@ -70,12 +48,25 @@ export function App() {
                     {peoples.map((person, key) => (
                         <Card 
                             person={person} 
-                            setPlayerValue={setPlayerValue}
-                            deleteCard={deleteCard}
-                            id={key}
+                            setPeoples={setPeoples}
+                            setPeoplesStop={setPeoplesStop}
+                            betAmount={betAmount}
                             key={key}
                         />
                         ))}
+                </div>
+                <div className='stopPeoples'>   
+                    <h2>Integrantes Pausados</h2>
+                    <div className="stopCards">
+                        {peoplesStop.map((personStop, key) => (
+                            <StopCard 
+                                personStop={personStop}
+                                setPeoples={setPeoples}
+                                setPeoplesStop={setPeoplesStop}
+                                key={key}
+                            />
+                        ))}
+                    </div>
                 </div>
             </div>
         </div>

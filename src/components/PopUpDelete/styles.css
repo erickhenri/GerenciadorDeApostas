@@ -1,0 +1,38 @@
+.popUpDeleteArea {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    width: 100vw;
+    height: 100vh;
+
+    background-color: #0006;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.popUpDelete {
+    background-color: #fff;
+    width: 80%;
+    padding: 20px;
+    border-radius: 6px;
+}
+
+.popUpDelete .options {
+    margin-top: 10px;
+}
+
+.popUpDelete .options .cancel {
+    padding: 10px;
+    border: 1px solid #8d99ae;
+    border-radius: 6px;
+}
+.popUpDelete .options .remove {
+    padding: 10px;
+    background-color: #ef476f;
+    border: none;
+    color: #fff;
+    border-radius: 6px;
+}
