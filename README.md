@@ -9,9 +9,9 @@
     />
 </center>
 
-<h2 align="center">
+<h3 align="center">
     <a href="https://gerenciador-de-apostas-fwi3.vercel.app/">Acessar o site</a>
-</h2>
+</h3>
 
 
 ## 📋 Sobre
