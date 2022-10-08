@@ -13,7 +13,6 @@
     <a href="https://gerenciador-de-apostas-fwi3.vercel.app/">Acessar o site</a>
 </h2>
 
----
 
 ## 📋 Sobre
 
