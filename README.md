@@ -2,12 +2,12 @@
 💰 Gerenciador de Apostas
 </h1>
 
-<center>
+<h1 align="center">
     <img  
         width="40%"       
         src="./public/Site_gerenciador_de_apostas.gif"
     />
-</center>
+</h1>
 
 <h3 align="center">
     <a target="_blank" href="https://gerenciador-de-apostas-fwi3.vercel.app/">Acessar o site</a>
