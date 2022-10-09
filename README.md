@@ -10,7 +10,7 @@
 </center>
 
 <h3 align="center">
-    <a href="https://gerenciador-de-apostas-fwi3.vercel.app/">Acessar o site</a>
+    <a target="_blank" href="https://gerenciador-de-apostas-fwi3.vercel.app/">Acessar o site</a>
 </h3>
 
 
