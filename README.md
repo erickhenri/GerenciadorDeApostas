@@ -44,5 +44,7 @@ O projeto foi desenvolvido ultilizando as seguintes tecnologias
 
     # Iniciar o projeto
     $ npm start
-
 ```
+---
+Feito com 💙 por Érick Henrique
+
