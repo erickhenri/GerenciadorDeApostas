@@ -2,6 +2,10 @@
 💰 Gerenciador de Apostas
 </h1>
 
+## 📋 Sobre
+
+O projeto **Gerenciador de Apostas** foi feito com o intuito de calcular o valor ganho ou perdido por cada jogador durante várias partidas de um jogo de azar. Eu desenvolvi quando percebi uma dificuldade de amigos próximos em gerenciar esses valores enquanto jogavam baralho com apostas de valores simbólicos.
+
 <h1 align="center">
     <img  
         width="40%"       
@@ -12,11 +16,6 @@
 <h3 align="center">
     <a target="_blank" href="https://gerenciador-de-apostas-fwi3.vercel.app/">Acessar o site</a>
 </h3>
-
-
-## 📋 Sobre
-
-O projeto **Gerenciador de Apostas** foi feito com o intuito de calcular o valor ganho ou perdido por cada jogador durante várias partidas de um jogo de azar. Eu desenvolvi quando percebi uma dificuldade de amigos próximos em gerenciar esses valores enquanto jogavam baralho com apostas de valores simbólicos.
 
 ---
 
